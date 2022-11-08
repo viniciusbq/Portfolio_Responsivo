@@ -80,7 +80,7 @@ span.navbar-text {
   align-items: center;
 }
 .social-icon {
-  display: inline-block;
+  display: flex;
   margin-left: 14px;
 }
 .social-icon a {
@@ -237,6 +237,29 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   }
 }
 
+@media (max-width: 1000px) {
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    font-weight: 400;
+    color: #fff !important;
+    letter-spacing: 0.8px;
+    font-size: 18px;
+    opacity: 1;
+    display: flex;
+    position: static;
+    margin-left: 40%;
+  }
+  .navbar-text button {
+    position: absolute;
+    top: 100px;
+    right: 5%;
+  }
+  .social-icon {
+    display: flex;
+    position: relative;
+    top: -110px;
+    margin-left: 30px;
+  }
+}
 /* Banner */
 .banner {
   margin-top: 0;
@@ -300,6 +323,13 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .banner img {
   animation: updown 3s linear infinite;
 }
+@media (max-width: 1000px) {
+  .banner img {
+    animation: updown 3s linear infinite;
+    height: 300px;
+    width: 250px;
+  }
+}
 @keyframes updown {
   0% {
     transform: translateY(-20px);
@@ -317,7 +347,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 
 /* Skills */
 .skil {
-  padding: 0 0 50px 0;
   position: relative;
 }
 
@@ -325,8 +354,9 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
+  height: 800px;
+  padding: 20px 20px;
+  margin-top: 50px;
 }
 
 .skill h2 {
@@ -339,7 +369,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px 0 75px 0;
+  margin: 14px 0 45px 20px;
 }
 
 .skill-slider {
@@ -348,12 +378,14 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   position: relative;
 }
 
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+.item img {
+  margin: 50px auto 35px auto;
+  border: 1px solid transparent;
 }
-.skill-slider .item img:hover {
+.item img:hover {
   cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.2);
 }
 
 .background-image-left {
@@ -363,7 +395,27 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
+@media (max-width: 1000px) {
+  .item img {
+    height: 150px;
+    width: 130px;
+    margin: 0 auto 5px auto;
+  }
+  .item {
+    margin: 4px;
+    padding: 0px;
+  }
 
+  .skill-bx {
+    height: 600px;
+    width: 100%;
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 50px 0px;
+    margin-top: 20px;
+  }
+}
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
@@ -564,7 +616,8 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 }
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
+  border-radius: 50px;
+  cursor: pointer;
   overflow: hidden;
   margin-bottom: 24px;
 }
@@ -615,7 +668,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/* Projects Css */
+/* Contacts Css */
 .contact {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   padding: 60px 0 200px 0;
